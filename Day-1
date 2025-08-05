@@ -299,6 +299,76 @@ What is C Programming
 	-> (Pointer to member access operator for structures/unions)
 	[] (Array subscript operator)
 	(type) (Type casting operator)
-		
-		
+
+
+
+Sample Programs:
+
+Weighted sum of 2 numbers
+We wish to calculate weighted total such that Maths marks are given 30% weightage and Physics marks are given 70% weightage.
+z = 30 / 100x + 70 / 100y
+
+        c. Code:
+            1.  Wrong code as total is not guaranteed to be int
+ #include <stdio.h>
+ /* weighted sum 2 integers */
+ main() {
+ int mathMarks = 98;
+ int phyMarks = 99;
+ int total;
+ total = (30/100)*mathMarks + (70/100)*phyMarks;
+ printf("%d\n", total);
+ }
+ 
+    
+    
+    2. Wrong code as 30/100 and 70/100 evaluate to 0 and therefore total is zero, even though total is changed to float.
+                #include <stdio.h>
+ /* weighted sum 2 integers */
+ main() {
+ int mathMarks = 98;
+ int phyMarks = 99;
+ float total;
+ /* float variable */
+ total = (30/100)*mathMarks + (70/100)*phyMarks;
+ printf("%f\n", total); /* change here */
+ }
+3. Correct code
+    #include <stdio.h>
+ /* weighted sum 2 integers */
+ main() {
+ int mathMarks = 98;
+ int phyMarks = 99;
+ float total;
+ total = (30.0/100)*mathMarks + (70.0/100)*phyMarks;
+ printf("%f\n", total);
+ }
+
+
+    2. Swap Two Integers
+        
+        Code:
+              #include<stdio.h>
+ main() {
+ int x, y;
+
+ printf("Enter x:");
+ scanf("%d", &x);
+ printf("Enter y:");
+ scanf("%d", &y);
+
+ int temp;
+ temp = x;
+ x = y;
+ y = temp;
+
+ printf("x = %d\n", x);
+ printf("y = %d\n", y);
+                 }
+
+
+    Exercises:
+Write a program to swap 2 numbers without using temp variable.
+Write a program that reads an integer from the input and prints 0 if the integer is even and 1 if the integer is odd.
+Write a program that takes as input a 3 digit integer, separates the digits of the integer and prints the individual digits separated by spaces. For example if the input is 194, then your program must print 1 9 4 (This question has to be done without using loop, the input will always be a 3 digit integer).		
 	
