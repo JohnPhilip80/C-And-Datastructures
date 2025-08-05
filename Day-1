@@ -1,0 +1,304 @@
+What is C Programming
+	C is the general purpose programming language that has wide range of applications.
+	Initially developed to rewrite the UNIX Operating System.
+	Google Chrome, Firefox, MySQL, etc are developed using C.
+	Old language created during 1970s.
+	C is not outdated. It is very fast and efficient.
+	To develop compiler or OS, C is the good option.
+	C Programming allows to access the hardware components at deeper level.
+	According to Glassdoor (popular job portal site) there are about 18000 job openings in US.
+	Many universities teaching C Programming as the first language.
+	Learning C helps to understand how the software and hardware interact with each other and allows to work directly with the computer memory.
+	
+	While(*s++ = *p++);
+	
+	"If you cant understand why this code copies a string, you are programming based on Superstition" - Joel Spolsky.
+	
+	Pre Requisites for C Programming
+		C Compiler
+		Text Editor
+	
+	First program.
+	
+	#include<stdio.h>
+	int main(){
+		printf("Hello World!");
+		return 0;
+	}
+	
+	Run this program.
+	
+	Every C program starts from the main function.
+	We will write our code inside the curly braces.
+	
+	Variables in C Programming
+		Variable is a name given to a memory location inside our computer where we can store data.
+	
+		int age;
+		age = 30;
+		
+		Every variable must have a type.
+		Every statement must end up with semicolon.
+		
+		declaration and initialization.
+		int age=30;
+		
+	printf("C Programming"); - Printing a string literal.
+	printf("%d",age); - Print the value of the variable. "%d" is format specifier. "%d" is replaced by the value of variable age.
+	
+	printf("Age :%d", age);
+	
+	Change value of variables
+		int main(){
+			int age=25;
+			printf("Age: %d",age);
+			age = 31;
+			printf("\nNew age: %d",age);
+			retrn 0;
+		}
+		Here the value of the variable is changed from 25 to 31. \n is the newline character.
+		
+	Assign variable to another variable.
+		int main(){
+			int firstNumber = 31;
+			printf("First Number = %d", firstNumber);
+			int secondNumber = firstNumber;
+			printf("\nSecond Number = %d", secondNumber);
+		}
+	
+	Declaring Multiple Variables at once
+		
+		int firstNumber,secondNumber = 25;
+		
+		This statement creates two integer variables and 25 is stored in secondNumber variable. firstNumber contains some garbage value.
+		
+	Variable naming conventions.
+		variables names should not contain spaces.
+		C Programming keywords should not be used as variable names. Ex: if, else, for, switch,int, etc.
+		Variable names should be descriptive.
+		For two world variable namess follow the camel case word.
+
+	Data Types in C Programming
+	
+		Data type specifies the type of data stored in the variable.
+		Data Type determines two things -> type of data and size of the variable.
+		
+		Different Data types:
+			int		4 bytes		%d for printing
+			double	8 bytes		%lf for printing
+			float	4 bytes 	%f for printing
+			char 	1 bytes		%c for printing
+			bool	1 bit
+			
+			int main(){
+				double number1 = 12.45;
+				float number2 = 10.9f;
+				
+				printf("%lf",number1);
+				printf(\n%.2lf",number1);
+				
+				printf("\n%f",number);
+				printf("\n%.1f",number);
+				return 0;
+			}
+			Exponential Numbers can also be stored in double and float.
+			
+			double number = 5.5e6;
+				Here 5.5e6 is 5.5 multiply by 10 to the power of 6.
+			
+			int main(){
+				double number = 5.5e6;
+				printf("%lf",number);
+				return 0;
+			}
+			
+		char data type.
+			int main(){
+				char character = 'z';
+				printf("%c",character);
+				return 0;
+			}
+		Internally Character data is stored as integer.
+			printf("%d",character);
+		
+		Use single quotation to specify the character data.
+		use %c format specifier to print.
+		character stored as integers internally. ASCII value.
+		
+	sizeof() Operator
+		used to find the size of data types.
+		
+		int main(){
+			int age;
+			double number;
+			printf("int size = %zu", sizeof(age));
+			printf("\ndouble size = %zu", sizeof(number));
+			return 0;
+		}
+	
+	Take Input and Print Output in C Programming
+		scanf function is used to get input from the user at runtime and store the value in the address of the variable.
+		scanf function has 2 parts. Format Specifier and Variable with Ampersand.
+			Ampersand specifies the memory address of the variable.
+			
+		int main(){
+			int age;
+			printf("Enter input value:");
+			scanf("%d",&age);
+			printf("\nAge = %d",age);
+			return 0;
+		}
+	
+		int main(){
+			double number;
+			char alphabet;
+			printf("Enter double input:");
+			scanf("%lf",&number);
+			printf("Enter charater input:");
+			scanf("%c",&alphabet);
+			
+			printf("Number: %lf",number);
+			printf("\nCharacter: %c",alphabet);
+			return 0;
+		}
+	Take Multiple Inputs using single scanf function
+		int main(){
+			double number;
+			char alphabet;
+			printf("Enter input values:");
+			scanf("%lf %c",&number, &alphabet);
+			
+			printf("Number: %lf",number);
+			printf("\nCharacter: %c",alphabet);
+			return 0;
+		}
+		
+		Try reading Integer and Float input data from the user.
+		
+		#include<studio.h>
+		int main(){
+			bool value1 = true;
+			bool value2 = false;
+			printf("%d  %d",value1,value1);
+			return 0;
+		}
+		
+	Comments in C Programming
+		Comments makes our code easier to understand.
+		Compiler will ignore the comments in the C Program.
+		Single Line Comments
+		Multi Line Comments 
+		Select the lines. Press Ctrl + Shift + Forward Slash. Keyboard shortcut for multiline comment.
+		Ctrl + Forward slash is the keyboard shortcut for sintle line comment.
+		In the real time project development by team, comments are very important to explain the changes.
+		
+	Operators in C
+		Symbols used to perform operations on values and variables.
+		Already we have used one operator in our previous programs. = (Assignment operator)
+		
+		Arithmetic Operators
+		+	Addition
+		-	Subtraction
+		*	Multiplication
+		/	Division
+		%	Remainder (Modulus)
+		++	Increment
+		--	Decrement
+		
+		int x=12;
+		int result = x + 8;
+		printf("%d",result);
+		printf("%d",x+10);
+		
+		int x=12;
+		int y=x++;
+		printf("%d",--x);
+		
+		int x=4/2+6*5-1;
+		printf("%d",x);
+		
+		Operators with higher precedence executed first and operators with lower precedence executed last.
+		BODMAS
+		
+	Implicit Type Conversion:
+		char a = '5';
+		int b=9;
+		int result = a+b;
+		printf("%d" result);
+		
+		Here char value is converted to its ascii value (53) and added with integer value.
+		
+		double a=5.67;
+		int b=9;
+		double result = a+b;
+		printf("%lf",result);
+		
+		Here int value is converted to double value (by including .00) and added with double value.
+		
+		Type conversion occur according to the data type hierarchy.
+		Data type lower in hierarchy will be converted to higher.
+		
+		Hierarchy is 
+			long double
+			double
+			float
+			long
+			int
+			short
+			char 
+		
+		int a=5.67;
+		Here double value is converted to int with data loss.
+		
+	Explicit Type Conversion.
+		double a = 5.67;
+		int b=9;
+		double result = (int)a + b;
+		printf("%lf",result);
+		
+		Here double value a will be converted into int.
+	
+	Relational Operators:
+	Used to compare two operands.
+	== 		(Equal to)
+	!= 		(Not equal to)
+	> 		(Greater than)
+	< 		(Less than)
+	>= 		(Greater than or equal to)
+	<= 		(Less than or equal to)
+		
+	Logical Operators:
+	Used to combine or modify conditional expressions.
+	&& 	(Logical AND)
+	|| 	(Logical OR)
+	! 	(Logical NOT)
+	
+	Bitwise Operators:
+	Used to perform operations on individual bits of an integer.
+	& 	(Bitwise AND)
+	| 	(Bitwise OR)
+	^ 	(Bitwise XOR)
+	~ 	(Bitwise NOT/One's complement)
+	<< 	(Left Shift)
+	>> 	(Right Shift)
+	
+	Assignment Operators:
+	Used to assign values to variables.
+	= 	(Assignment)
+	+=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>= 	(Compound assignment operators)
+	
+	Conditional (Ternary) Operator:
+	A shorthand for an if-else statement.
+	condition ? expression1 : expression2;
+	
+	Special Operators:
+	sizeof (Returns the size of a variable or data type)
+	& (Address-of operator)
+	* (Pointer dereference operator)
+	. (Member access operator for structures/unions)
+	-> (Pointer to member access operator for structures/unions)
+	[] (Array subscript operator)
+	(type) (Type casting operator)
+		
+		
+	
